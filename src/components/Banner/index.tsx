@@ -67,8 +67,8 @@ function Banner() {
                     </div>
                 </div>
                 <div className="d-flex flex-row flex-wrap mt-5">                    
-                    {/* Contact Button */}
-                    <div className="col-lg-9 col-sm-12 col-xs-12 p-0">
+                    {/* Search and Dropdown div */}
+                    <div className="col-lg-9 col-sm-12 col-xs-12 p-0 d-sm-none d-xs-none d-lg-block">
                         <div className="col-lg-12 dropdownbox p-0">
                             <Dropdown
                                 placeholder='Search'
@@ -81,8 +81,8 @@ function Banner() {
                         </div>
                     </div>
                 
-                    {/* Video Div */}
-                    <div className="col-lg-3 col-sm-12 col-xs-12 d-flex videoMainbox align-items-center p-0 d-md-block d-lg-block">
+                    {/* Video Carousel Div */}
+                    <div className="col-lg-3 col-sm-12 col-xs-12 d-flex videoMainbox align-items-center p-0 d-md-none d-lg-block d-sm-none d-xs-none">
                     <Carousel activeIndex={index} onSelect={handleSelect}>
                         { Text.CarouselData.map((value)=>{
                             return(
@@ -92,13 +92,49 @@ function Banner() {
                                             <img src={value.Images} className="videoClass"/>
                                             <img src={Play} className="playBtn"/>
                                         </div>
-                                        <h3>{value.Text}</h3>
+                                        <div className="col-lg-12 col-xs-3 col-sm-3 p-0 d-flex align-items-center">
+                                            <h3 className="h3class">{value.Text}</h3>
+                                        </div>
                                     </Carousel.Caption>
                                 </Carousel.Item>
                             );
                         }) }
                         </Carousel>
                     </div>
+
+                    {/* Video Carousel Responsive */}
+
+                    <div className="col-lg-3 col-sm-12 col-xs-12 d-flex videoMainbox p-0 d-lg-none">
+                        <div className="col-lg-9 col-sm-9 col-xs-9 p-0 d-lg-none">
+                            <div className="col-lg-12 dropdownbox p-0">
+                                <Dropdown
+                                    placeholder='Search'
+                                    fluid
+                                    search
+                                    selection
+                                    options={options}
+                                    onChange={(values)=>caroSelect(values)}
+                                />
+                            </div>
+                        </div>
+                        <div className="col-lg-12 col-xs-3 col-sm-3 p-0">
+                            <Carousel activeIndex={index} onSelect={handleSelect}>
+                            { Text.CarouselData.map((value)=>{
+                                return(
+                                    <Carousel.Item>
+                                        <Carousel.Caption>
+                                            <div onClick={()=>showPopup(value.Video)} className="d-flex align-items-center">
+                                                <h3 className="h3classResponsive d-flex align-items-center">{value.Text}</h3>
+                                            </div>
+                                        </Carousel.Caption>
+                                    </Carousel.Item>
+                                );
+                            }) }
+                            </Carousel>
+                        </div>
+                    </div>
+
+                    {/* Popup box */}
                     <div className="modal" style={showModal ? {display: "block"} : {display: "none"}} role="dialog">
                         <div className="modal-dialog" role="document">
                             <div className="modal-content">
@@ -109,11 +145,6 @@ function Banner() {
                                 </button>
                             </div>
                             <div className="modal-body">
-                                {/* <Player
-                                    playsInline
-                                    poster="/assets/poster.png"
-                                    src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
-                                /> */}
                                 <video src={videoSrc} width="100%" controls></video>
                             </div>
                             <div className="modal-footer">

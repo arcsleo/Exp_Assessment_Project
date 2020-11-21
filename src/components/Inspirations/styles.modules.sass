@@ -41,9 +41,10 @@ $text-font: 1.1em
     .BottomHead
         font-size: $heading-font
         font-weight: 900
+        line-height: 1.1
     .inspimageTextarea
         position: absolute
-        top: 65%
+        // top: 65%
         color: $primary-color
         padding: 0% 5%
         font-size: $text-font
@@ -51,23 +52,29 @@ $text-font: 1.1em
             font-size: 1.7em
             font-weight: 600
         .inspuserlogo
-            width: 15%
-            margin-left: -3%
+            width: 40px
+            margin-left: -10%
         .inspuserlogotop
-            width: 15%
-            margin-left: -3%
+            width: 40px
+            margin-left: -10%
     .secondarytextarea
-        top: 60%
+        bottom: 10%
+        width: 100%
+        .diffimagediv
+            bottom: 10%
+            position: absolute
+    .diffimagemaindiv
+        top: 50%
+        height: 45%
+        bottom: auto
 @media (max-width: $mobile-device)
     .InspirationsCaroMainbox2
-        padding-top: 50% !important
-    .secondarytextarea
-        top: 40% !important
+        padding-top: 60% !important
     .inspuserlogo
-        width: 25% !important
-        margin-left: -6% !important
+        width: 30px !important
+        margin-left: -10% !important
     .inspuserlogotop
-        width: 15% !important
+        width: 30px !important
     .inspimage1
         height: 100% !important
     .BottomHead 
@@ -76,15 +83,17 @@ $text-font: 1.1em
         text-align: center
     .BottomButton
         text-align: center
+    .longimg
+        bottom: 20% !important
+    .insresponsivebox
+        height: 300px !important
 
 @media (min-width: $mobile-device) and (max-width: $breakpoint-device)
     .InspirationsCaroMainbox
         padding-top: 30% !important
-    .secondarytextarea
-        top: 40% !important
     .inspuserlogo
         width: 25% !important
-        margin-left: -6% !important
+        margin-left: -10% !important
     .inspuserlogotop
         width: 15% !important
     .inspimage1

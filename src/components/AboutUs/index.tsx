@@ -18,6 +18,7 @@ function Download(props: any) {
 
   return (
     <div id="Aboutus" className="AboutMainDiv d-flex flex-wrap">
+        {/* Information and Company Tab */}
         <div className="col-lg-10 d-flex flex-wrap">
             { Text.AboutData.map((value)=>{
                 return(
@@ -38,6 +39,9 @@ function Download(props: any) {
             <div className="col-lg-12 p-0">{Text.Aboutemail}</div>
             <div className="col-lg-12 p-0">{Text.Aboutphone}</div>
         </div>
+
+            {/* Terms and Conditions & reserved rights */}
+
         <div className="col-lg-6 col-sm-12 col-xs-12 firstdiv mt-4 d-flex align-items-center">
             Terms & conditions  |  Privacy Policy
         </div>

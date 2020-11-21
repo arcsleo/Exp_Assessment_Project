@@ -27,6 +27,9 @@ import InspUser8 from '../Images/InspUser8.png';
 import Video1 from '../Video/Video1.mp4';
 import Video2 from '../Video/Video2.mp4';
 import Video3 from '../Video/Video3.mp4';
+import Caro1 from '../Images/FeatureStoryCaro1.png';
+import Caro2 from '../Images/FeatureStoryCaro2.png';
+import Caro3 from '../Images/FeatureStoryCaro3.png';
 
 
 export const Text = {
@@ -66,13 +69,13 @@ export const Text = {
     InspirationText: "At iam decimum annum in spelunca iacet. Cur tantas regiones barbarorum pedibus obiit, tot maria transmisit.",
     InspirationFullbox: "At iam decimum annum in spelunca iacet. Cur tantas regiones barbarorum pedibus obiit, tot maria transmisit. At iam decimum annum in spelunca iacet. Cur tantas regiones barbarorum pedibus obiit, tot maria transmisit.",
     InspirationData: [
-        { Image: Insp1, Subtitle: "At iam decimum", Title: "Cur tantas regiones barbarorum", UsersDetails: [ InspUser1, InspUser2, InspUser3 ] },
-        { Image: Insp2, Subtitle: "At iam decimum", Title: "Regiones barbarorum", UsersDetails: [ InspUser7, InspUser6, InspUser2 ] },
-        { Image: Insp3, Subtitle: "At iam decimum", Title: "Regiones barbarorum", UsersDetails: [ InspUser4, InspUser5, InspUser6 ] },
-        { Image: Insp4, Subtitle: "At iam decimum", Title: "Regiones barbarorum", UsersDetails: [ InspUser7, InspUser2, InspUser4 ] },
-        { Image: Insp5, Subtitle: "At iam decimum", Title: "At iam decimum ", UsersDetails: [ InspUser8, InspUser3 ] },
-        { Image: Insp6, Subtitle: "At iam decimum", Title: "Regiones barbarorum", UsersDetails: [ InspUser6, InspUser7, InspUser8 ] },
-        { Image: Insp7, Subtitle: "At iam decimum", Title: "Regiones barbarorum", UsersDetails: [ InspUser5, InspUser4, InspUser2 ] },
+        { Image: Insp1, Subtitle: "At iam decimum", Title: "Cur tantas regiones barbarorum", UsersDetails: [ InspUser1, InspUser2, InspUser3 ], isdiff: false },
+        { Image: Insp2, Subtitle: "At iam decimum", Title: "Regiones barbarorum", UsersDetails: [ InspUser7, InspUser6, InspUser2 ], isdiff: false },
+        { Image: Insp3, Subtitle: "At iam decimum", Title: "Regiones barbarorum", UsersDetails: [ InspUser4, InspUser5, InspUser6 ], isdiff: false },
+        { Image: Insp4, Subtitle: "At iam decimum", Title: "Regiones barbarorum", UsersDetails: [ InspUser7, InspUser2, InspUser4 ], isdiff: false },
+        { Image: Insp5, Subtitle: "At iam decimum", Title: "At iam decimum ", UsersDetails: [ InspUser8, InspUser3 ], isdiff: true },
+        { Image: Insp6, Subtitle: "At iam decimum", Title: "Regiones barbarorum", UsersDetails: [ InspUser6, InspUser7, InspUser8 ], isdiff: false },
+        { Image: Insp7, Subtitle: "At iam decimum", Title: "Regiones barbarorum", UsersDetails: [ InspUser5, InspUser4, InspUser2 ], isdiff: false },
     ],
     BottomHead1:  "Lorem Ipsum Dolor",
     BottomHead2: "Sit Amet",
@@ -108,5 +111,13 @@ export const Text = {
         { Title: "Newsletter", Link: "#Newsletter" },
         { Title: "Inspirations", Link: "#Inspirations" },
         { Title: "Contact Us", Link: "#Aboutus" },
+    ],
+    CarouselImages: [
+        { Image: Caro1, Title: "First Slide" },
+        { Image: Caro2, Title: "Second Slide" },
+        { Image: Caro3, Title: "Third Slide" },
+        { Image: Caro1, Title: "Fourth Slide" },
+        { Image: Caro2, Title: "Fifth Slide" },
+        { Image: Caro3, Title: "Sixth Slide" },
     ]
 };

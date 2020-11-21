@@ -35,6 +35,7 @@ function Newletter(props: any) {
   return (
     <div id="Newsletter" className="NewletterMainDiv">
         <div className="col-lg-12 NewletterleftBox row m-0 p-0">
+            {/* NewsLetter Heading --- Left Side */}
             <div className="col-lg-12 col-sm-12 col-xs-12 BannerBoxCover">
                 <div className="BannerMainText">
                     <div>
@@ -51,10 +52,12 @@ function Newletter(props: any) {
                 </div>
             </div>
                 { isSigned ?
+                    // Signed newsletter div
                     <div className="col-lg-3 col-sm-11 col-xs-11 p-0 signedData">
                         Hi {userName}, Thanks for signing up.
                     </div>
                     :
+                    // Registration Div
                     <div className="col-lg-3 col-sm-11 col-xs-11 p-0 RegisterBox">
                         <div className="col-lg-12 pt-5 pl-5 pr-5 pb-0">
                             <input type="text" className="Namebox pb-2 mb-3" onKeyUp={(e)=>dataUpdation(e, "name")} placeholder="Name"/>

@@ -12,7 +12,9 @@ function Download() {
     <div className="DownloadMainbox">
         <div className="d-flex flex-wrap Downloads align-items-center">
             <div className="col-lg-4 col-sm-12 col-xs-12">
+                {/* Mobile Image */}
                 <img src={MobileIMG} className="mobileImg" /> 
+                {/* Details inside mobile image */}
                 <div className="mobileoverlay">
                     <div className="d-flex flex-column mobileoverlaycover">
                         <div className="mobileoverlayHeading mb-2">{Text.FeatureStories1MainText1}</div>
@@ -23,12 +25,14 @@ function Download() {
                 </div>
             </div>
             <div className="col-lg-8 col-sm-12 col-xs-12">
+                {/* Download Text */}
                 <div className="col-lg-12 col-xs-12 DownloadHeader mt-4">
                     { Text.DownloadHead }
                 </div>
                 <div className="col-lg-5 col-xs-12 DownloadSecondText mt-4 p-0">
                     {Text.FeatureStories1SubText}
                 </div>
+                {/* IOS and Android Image */}
                 <div className="col-lg-6 col-sm-10 col-xs-10 p-0 row DownloadApplogo mt-4 mb-4">
                     <div className="col-lg-6 col-sm-6 col-xs-6 pr-0">
                         <a href="https://www.apple.com/in/app-store/" target="_blank">

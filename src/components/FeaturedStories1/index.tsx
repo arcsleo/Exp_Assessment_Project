@@ -36,9 +36,11 @@ function FeatureStories1() {
                 </div>
             </div>
             <div className="col-lg-3 col-sm-12 col-xs-12 rightBox">
+                {/* Feature Heading */}
                 <div className="col-lg-8 col-sm-12 col-xs-12 featureHeading mb-5">
                     {Text.FeatureHead}
                 </div>
+                {/* Feature stories, users and dates */}
                 <div className="col-lg-12 col-xs-12 p-0 userStoriesMaindiv">
                     { Text.FeatureStory.map((value)=>{
                         return(
