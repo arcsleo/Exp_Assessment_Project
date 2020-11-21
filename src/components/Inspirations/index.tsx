@@ -9,11 +9,14 @@ import Bottom2 from '../../Images/Bottom2.png';
 import Bottom3 from '../../Images/Bottom3.png';
 import Bottom4 from '../../Images/Bottom4.png';
 
-function Inspirations() {
+function Inspirations(props) {
 
+    const { isSigned } = props;
+
+    const [showModal, setshowModal] = React.useState(false);
 
   return (
-    <div id="Inspirations" className="InspirationsCaroMainbox">
+    <div id="Inspirations" className={ isSigned ? "InspirationsCaroMainbox" : "InspirationsCaroMainbox InspirationsCaroMainbox2" }>
         <div className="d-flex InspirationsCaros align-items-center">
             <div className="col-lg-12 col-sm-12 col-xs-12">
                 <div className="col-lg-12 InspirationsCaroHeader mt-4">
@@ -82,7 +85,7 @@ function Inspirations() {
                     </div>
                     <div className="col-lg-6 col-sm-12 col-xs-12 mt-4 mb-4">
                         <div className="col-lg-12 BottomButton p-0">
-                            <input type="button" className="Learnmore pt-3 pb-3 pl-5 pr-5"  value="Learn More"/>
+                            <input type="button" onClick={()=>setshowModal(true)} className="Learnmore pt-3 pb-3 pl-5 pr-5"  value="Learn More"/>
                         </div>
                     </div>
                 </div>
@@ -99,6 +102,23 @@ function Inspirations() {
                 </div>
                 <div className="col-lg-6 col-sm-6 col-xs-6 pb-4">
                     <img src={Bottom4} className="bottom4" width="75%" />
+                </div>
+            </div>
+            <div className="modal" style={showModal ? {display: "block"} : {display: "none"}} role="dialog">
+                <div className="modal-dialog" role="document">
+                    <div className="modal-content">
+                        <div className="modal-header">
+                            <h5 className="modal-title">{Text.FeatureStories1MainText1}{' '}{Text.FeatureStories1MainText2}</h5>
+                            <button type="button" className="close" onClick={()=>setshowModal(false)} data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div className="modal-body">
+                            <div className="modalbody">{Text.InspirationFullbox}</div>
+                        </div>
+                        <div className="modal-footer">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

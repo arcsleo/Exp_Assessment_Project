@@ -43,3 +43,12 @@
         transform: translate(-50%, -50%);
         text-align: center;
     }
+    @media only screen and (max-width: 600px) {
+        .overlay{
+            width: 93% !important;
+        }
+        .SecondbannerHoverTile:hover .overlay
+        {
+            height: 95% !important;
+        }
+       }

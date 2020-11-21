@@ -3,13 +3,14 @@ import './styles.modules.sass';
 import '../../css/custom.styles.css';
 import { Text } from '../../constants/constants';
 
-function Newletter() {
+function Newletter(props: any) {
 
     const [isSigned, setisSigned] = React.useState(false);
     const [userName, setuserName] = React.useState('');
     const [validation, setvalidation] = React.useState(false);
     const [userEmail, setuserEmail] = React.useState('');
     const [userPhone, setuserPhone] = React.useState('');
+    const { callbackFn } = props;
 
     const dataUpdation = (e, field) => {
         if(field === "name")
@@ -24,6 +25,7 @@ function Newletter() {
         if( userName !== "" && userEmail !== "" && userPhone !== "" )
         {
             setvalidation(false);
+            callbackFn(true);
             setisSigned(true);
         }
         else

@@ -5,3 +5,13 @@ h3{
   font-weight: 500 !important;
   height: 6vh;
 }
+
+.carousel{
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+ h3{
+   height: fit-content !important;
+ }
+}

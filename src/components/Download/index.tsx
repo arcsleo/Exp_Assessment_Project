@@ -31,10 +31,14 @@ function Download() {
                 </div>
                 <div className="col-lg-6 col-sm-10 col-xs-10 p-0 row DownloadApplogo mt-4 mb-4">
                     <div className="col-lg-6 col-sm-6 col-xs-6 pr-0">
-                        <img src={IOSImg} className="mobileImg" /> 
+                        <a href="https://www.apple.com/in/app-store/" target="_blank">
+                            <img src={IOSImg} className="mobileImg" />
+                        </a>
                     </div>
                     <div className="col-lg-6 col-sm-6 col-xs-6 pr-0">
-                        <img src={AndroidImg} className="mobileImg" /> 
+                        <a href="https://play.google.com/store" target="_blank">
+                            <img src={AndroidImg} className="mobileImg" /> 
+                        </a>
                     </div>
                 </div>
             </div>

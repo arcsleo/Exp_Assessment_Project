@@ -61,7 +61,9 @@ function Banner() {
                 <div className="d-flex flex-row mb-5">                    
                     {/* Contact Button */}
                     <div className="col-lg-9 col-sm-12 col-xs-12 p-0 mt-5">
-                        <input type="button" className="contactBtn pt-3 pb-3 pl-5 pr-5"  value="Contact"/>
+                        <a href="mailto:testmail@gmail.com">
+                            <input type="button" className="contactBtn pt-3 pb-3 pl-5 pr-5"  value="Contact"/>
+                        </a>
                     </div>
                 </div>
                 <div className="d-flex flex-row flex-wrap mt-5">                    
@@ -80,7 +82,7 @@ function Banner() {
                     </div>
                 
                     {/* Video Div */}
-                    <div className="col-lg-3 col-sm-3 col-xs-3 d-flex videoMainbox align-items-center p-0 d-sm-none d-xs-none d-md-block d-lg-block">
+                    <div className="col-lg-3 col-sm-12 col-xs-12 d-flex videoMainbox align-items-center p-0 d-md-block d-lg-block">
                     <Carousel activeIndex={index} onSelect={handleSelect}>
                         { Text.CarouselData.map((value)=>{
                             return(

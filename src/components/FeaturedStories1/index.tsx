@@ -29,7 +29,9 @@ function FeatureStories1() {
                 <div className="d-flex flex-row">                    
                     {/* Contact Button */}
                     <div className="col-lg-9 col-sm-12 col-xs-12 p-0 mt-4 mb-4">
-                        <input type="button" className="contactBtn pt-3 pb-3 pl-5 pr-5"  value="Contact"/>
+                        <a href="mailto:testmail@gmail.com">
+                            <input type="button" className="contactBtn pt-3 pb-3 pl-5 pr-5"  value="Contact"/>
+                        </a>
                     </div>
                 </div>
             </div>

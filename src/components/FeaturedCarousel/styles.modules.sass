@@ -3,7 +3,7 @@ $secondary-color: #000
 $base-font-size: 15px
 $no-padding: 0px
 $background-size: cover
-$breakpoint-device: 989px
+$breakpoint-device: 600px
 $heading-font: 2.4em
 $text-font: 1.1em
 
@@ -28,4 +28,6 @@ $text-font: 1.1em
         cursor: pointer
     .rightcardiv 
         right: 1%   
-      
+@media (max-width: $breakpoint-device)
+    div[role="list"]
+        height: 200px !important

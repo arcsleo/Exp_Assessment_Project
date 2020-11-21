@@ -64,6 +64,7 @@ export const Text = {
     NewsLetterSubText: "At iam decimum annum in spelunca iacet. Cur tantas regiones barbarorum pedibus obiit, tot maria transmisit.",
     InspirationsHead: "Inspirations",
     InspirationText: "At iam decimum annum in spelunca iacet. Cur tantas regiones barbarorum pedibus obiit, tot maria transmisit.",
+    InspirationFullbox: "At iam decimum annum in spelunca iacet. Cur tantas regiones barbarorum pedibus obiit, tot maria transmisit. At iam decimum annum in spelunca iacet. Cur tantas regiones barbarorum pedibus obiit, tot maria transmisit.",
     InspirationData: [
         { Image: Insp1, Subtitle: "At iam decimum", Title: "Cur tantas regiones barbarorum", UsersDetails: [ InspUser1, InspUser2, InspUser3 ] },
         { Image: Insp2, Subtitle: "At iam decimum", Title: "Regiones barbarorum", UsersDetails: [ InspUser7, InspUser6, InspUser2 ] },

@@ -8,7 +8,13 @@ import YouTubeIcon from '@material-ui/icons/YouTube';
 
 import { Text } from '../../constants/constants';
 
-function Download() {
+function Download(props: any) {
+
+    const { loaderEnd } = props;
+
+    React.useEffect(()=>{
+        loaderEnd();
+    });
 
   return (
     <div id="Aboutus" className="AboutMainDiv d-flex flex-wrap">
