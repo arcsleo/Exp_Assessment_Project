@@ -1,0 +1,61 @@
+$primary-color: #fff
+$secondary-color: #000
+$base-font-size: 15px
+$no-padding: 0px
+$background-size: cover
+$breakpoint-device: 989px
+$heading-font: 2.4em
+$text-font: 1.1em
+
+.leftBox
+    // background-image: url('../../Images/FeatureStory1.png')
+    // background-size: cover
+    // background-repeat: no-repeat 
+    // background-position: bottom
+    .BannerBoxCover
+        width: 100%
+        padding: 15% 7% !important
+        padding-bottom: 1% !important
+        background-color: rgba(0,0,0,0.5)
+        .BannerMainText
+            font-size: $heading-font
+            line-height: 1.3
+            color: $primary-color
+            font-weight: 700
+        .SubText
+            font-size: $text-font
+            color: $primary-color
+            font-weight: 500
+        .contactBtn 
+            border-radius: 5px
+            outline: none !important
+            border: none !important
+            color: $primary-color
+            background-color: rgb(239, 112, 97)
+    .rightBox
+        background-color: rgba(0,0,0,0.8)
+        color: $primary-color
+        overflow: auto
+        padding: 2.5% 3%
+        padding-bottom: 1.5% !important
+        .featureHeading
+            font-size: $heading-font
+            font-weight: 700
+            line-height: 1.3
+        .userStoriesMaindiv
+            max-height: 45vh
+            overflow-y: auto
+            overflow-x: hidden
+        .userStories
+            border-bottom: 1px solid $primary-color
+            .userImage
+                width: 100%
+            .userStory
+                font-size: $text-font
+            .StoryDate 
+                font-size: 0.9em
+
+@media (max-width: $breakpoint-device)
+    .rightBox
+        padding: 2% 7% !important
+      

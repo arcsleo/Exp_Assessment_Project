@@ -1,0 +1,53 @@
+$primary-color: #fff
+$secondary-color: grey
+$breakpoint-device: 600px
+.HeaderMainbox    
+    padding: 2% 7%
+    position: fixed
+    z-index: 1000
+    width: 100%
+    color: $primary-color
+    font-size: 1.4em
+    background-color: rgba(0,0,0,0.4)
+    .handburgerbtn
+        cursor: pointer
+        text-align: right
+        z-index: 11000
+.menudiv
+    width: 100%
+    background-color: rgba(153, 153, 153, 1)
+    color: $primary-color
+    position: fixed
+    top: 0%
+    height: 0px
+    overflow: hidden
+    padding: 2% 7%
+    transition: height 2s
+    z-index: 10000
+    .menu-item
+        text-align: center
+        font-size: 1.1em
+        font-weight: 600
+        .menulink
+            color: $primary-color !important
+    .handburgerbtnclose
+        cursor: pointer
+        text-align: right
+        z-index: 11000
+        position: absolute
+        right: 1%
+
+@media (min-width: $breakpoint-device)
+    .menu-item
+        padding-top: 2% !important
+        padding-bottom: 2% !important
+
+@media (max-width: $breakpoint-device)
+    .head
+        text-align: center
+    .HeaderMainbox
+        font-size: 1.2em
+    .menu-item
+        text-align: center
+        border-bottom: 1px solid grey
+        
