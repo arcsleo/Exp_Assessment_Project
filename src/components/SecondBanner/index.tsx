@@ -2,6 +2,7 @@ import React from 'react';
 import './styles.modules.sass';
 import { Carousel } from 'react-bootstrap';
 import { Dropdown } from 'semantic-ui-react';
+import Play from '../../Images/Play.png';
 import '../../css/custom.styles.css';
 import { Text } from '../../constants/constants';
 
@@ -37,6 +38,43 @@ function SecondBanner() {
 
   return (
     <div className="SecondBannerMainBox">
+
+        <div className="d-flex flex-row flex-wrap mt-5 dropdowndiv">                    
+            {/* Search and Dropdown div */}
+            <div className="col-lg-9 col-sm-12 col-xs-12 p-0 d-sm-none d-xs-none d-lg-block">
+                <div className="col-lg-12 dropdownbox p-0">
+                    <Dropdown
+                    placeholder='Search'
+                    fluid
+                    search
+                    selection
+                    options={options}
+                    onChange={(values)=>caroSelect(values)}
+                    />
+                </div>
+            </div>
+                    
+            {/* Video Carousel Div */}
+            <div className="col-lg-3 col-sm-12 col-xs-12 d-flex videoMainbox align-items-center p-0 d-md-none d-lg-block d-sm-none d-xs-none">
+                <Carousel activeIndex={index} onSelect={handleSelect}>
+                    { Text.CarouselData.map((value)=>{
+                        return(
+                            <Carousel.Item>
+                                <Carousel.Caption>
+                                    <div onClick={()=>showPopup(value.Video)} className="col-lg-12 p-0 d-flex videoMainbox align-items-center">
+                                        <img src={value.Images} className="videoClass"/>
+                                        <img src={Play} className="playBtn"/>
+                                    </div>
+                                    <div className="col-lg-12 col-xs-3 col-sm-3 p-0 d-flex align-items-center">
+                                        <h3 className="h3class">{value.Text}</h3>
+                                    </div>
+                                </Carousel.Caption>
+                            </Carousel.Item>
+                        );
+                    }) }
+                </Carousel>
+            </div>
+        </div>
         {/* Video Carousel Responsive */}
 
         <div className="col-lg-3 col-sm-10 col-xs-10 d-flex videoMainbox videomainresponsive p-0 d-lg-none">

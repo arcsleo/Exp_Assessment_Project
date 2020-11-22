@@ -43,6 +43,9 @@
         transform: translate(-50%, -50%);
         text-align: center;
     }
+    .modal-dialog {
+        margin: 5.75rem auto !important;
+    }
     @media only screen and (max-width: 600px) {
         .overlay{
             width: 93% !important;
