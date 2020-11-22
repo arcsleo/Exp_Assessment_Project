@@ -102,38 +102,6 @@ function Banner() {
                         </Carousel>
                     </div>
 
-                    {/* Video Carousel Responsive */}
-
-                    <div className="col-lg-3 col-sm-12 col-xs-12 d-flex videoMainbox p-0 d-lg-none">
-                        <div className="col-lg-9 col-sm-9 col-xs-9 p-0 d-lg-none">
-                            <div className="col-lg-12 dropdownbox p-0">
-                                <Dropdown
-                                    placeholder='Search'
-                                    fluid
-                                    search
-                                    selection
-                                    options={options}
-                                    onChange={(values)=>caroSelect(values)}
-                                />
-                            </div>
-                        </div>
-                        <div className="col-lg-12 col-xs-3 col-sm-3 p-0">
-                            <Carousel activeIndex={index} onSelect={handleSelect}>
-                            { Text.CarouselData.map((value)=>{
-                                return(
-                                    <Carousel.Item>
-                                        <Carousel.Caption>
-                                            <div onClick={()=>showPopup(value.Video)} className="d-flex align-items-center">
-                                                <h3 className="h3classResponsive d-flex align-items-center">{value.Text}</h3>
-                                            </div>
-                                        </Carousel.Caption>
-                                    </Carousel.Item>
-                                );
-                            }) }
-                            </Carousel>
-                        </div>
-                    </div>
-
                     {/* Popup box */}
                     <div className="modal" style={showModal ? {display: "block"} : {display: "none"}} role="dialog">
                         <div className="modal-dialog" role="document">
